@@ -1,0 +1,7 @@
+.table {
+  margin: 40px;
+  display: grid;
+  place-items: center; /* This will center the content inside the grid */
+  height: calc(100vh - 80px); /* Adjust height to be full screen minus margin */
+  width: calc(100vw - 80px); /* Adjust width to be full screen minus margin */
+}

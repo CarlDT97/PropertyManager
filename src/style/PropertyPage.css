@@ -1,0 +1,18 @@
+.divBox {
+  height: 50px;
+  border: 30px;
+  background-color: rgb(146, 142, 142);
+  margin-bottom: 20px;
+}
+
+.propBox {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Cards take up one fraction of the available space with a minimum width of 300px */
+  grid-gap: 10px; /* Adjust the gap between cards */
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 100px;
+}

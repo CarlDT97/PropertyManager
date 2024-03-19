@@ -1,0 +1,15 @@
+.page-container {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  flex-direction: column; /* Stack children vertically */
+  margin: 20%;
+}
+
+.navCards-container {
+  display: flex;
+  justify-content: center; /* Center the NavCards horizontally within the container */
+  align-items: center; /* Align NavCards vertically */
+  flex-wrap: wrap; /* Allow NavCards to wrap onto the next line if there's not enough space */
+  gap: 20px; /* Optional: Add some space between the NavCard components */
+}

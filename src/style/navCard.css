@@ -1,0 +1,53 @@
+.card_box {
+  border: 2px solid rgb(0, 0, 0);
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  cursor: pointer; /* Suggests clickable */
+  border-radius: 20%;
+  box-shadow: 6px 6px 1px 1px rgb(130, 156, 239);
+}
+
+.link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits color from parent, ensuring text remains consistent */
+}
+
+.link:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  /* Text color is not changed to maintain consistency */
+}
+
+.icon {
+  margin: auto;
+  display: flex; /* Center content within icon box */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  padding: 10px;
+}
+
+#icon_box {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  text-align: center;
+  border-radius: 100%;
+  display: flex; /* Ensures the icon is centered */
+  justify-content: center; /* Horizontally */
+  align-items: center; /* Vertically */
+}
+
+#title_box {
+  position: relative;
+  text-align: center;
+}
+
+#title_box p {
+  margin-top: 5px; /* Removes default margin */
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
