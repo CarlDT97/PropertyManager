@@ -1,10 +1,9 @@
 import * as React from 'react'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Typography from '@mui/material/Typography'
-import { CardActionArea } from '@mui/material'
 import { Link } from 'react-router-dom' // Import Link from React Router
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { Avatar, Card } from 'antd';
+
+const { Meta } = Card;
 
 interface PropertyCardProps {
   name: string
@@ -20,24 +19,22 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   return (
     <Link to={link}>
       {' '}
-      {/* Wrap with Link */}
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image=""
-            alt="Bankgatan 18A"
+        <Card
+            hoverable
+
+        style={{ width: 300 }}
+        cover={
+          <img
+            alt="example"
+            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
           />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {property_description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+        }
+      >
+        <Meta
+          avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
+          title={name}
+          description={property_description}
+        />
       </Card>
     </Link>
   )

@@ -1,31 +1,30 @@
-import * as React from 'react'
-import '../style/navCard.css'
-import { ElementType } from 'react' // Import ElementType
-import { Link } from 'react-router-dom' // Import Link from react-router-dom
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Card, Divider } from 'antd';
+import { ElementType } from 'react';
+
+const { Meta } = Card;
 
 interface NavCardProps {
-  title: string
-  link: string
-  Icon: ElementType
+  title: string;
+  link: string;
+  Icon: ElementType; // Define Icon prop as ElementType
 }
 
 const NavCard: React.FC<NavCardProps> = ({ title, link, Icon }) => {
   return (
     <Link to={link} className="link">
-    <div className="card_box">
-        {' '}
-        <div id="icon_box">
-          <div className="icon">
-            <Icon />
+      <Card hoverable style={{ width: 240, height: 240, borderRadius: 50 }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ marginBottom: '12px' }}>
+            <Icon style={{ fontSize: 64, color: '#1890ff' }} />
           </div>
+          <Divider />
+          <Meta title={title}/>
         </div>
-        <div id="title_box">
-          <p>{title}</p>
-        </div>
-    </div>
-          </Link>
+      </Card>
+    </Link>
+  );
+};
 
-  )
-}
-
-export default NavCard
+export default NavCard;

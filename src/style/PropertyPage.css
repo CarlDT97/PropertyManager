@@ -1,9 +1,4 @@
-.divBox {
-  height: 50px;
-  border: 30px;
-  background-color: rgb(146, 142, 142);
-  margin-bottom: 20px;
-}
+
 
 .propBox {
   display: grid;
