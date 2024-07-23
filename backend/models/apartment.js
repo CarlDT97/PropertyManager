@@ -1,7 +1,5 @@
-const { Schema, model } = require('mongoose')
-const { type } = require('os')
+const { Schema, model } = require('mongoose');
 
-// Define the Apartment schema
 const apartmentSchema = new Schema({
   property: { type: Schema.Types.ObjectId, ref: 'Property', required: true }, // Reference to the Property model
   apartmentNumber: { type: String, required: true },
@@ -20,9 +18,9 @@ const apartmentSchema = new Schema({
   hasSafetyDoor: { type: Boolean, default: false },
   description: { type: String },
   isOccupied: { type: Boolean, required: true },
-})
+  tenantContract: { type: Schema.Types.ObjectId, ref: 'TenantContract' } // Reference to TenantContract model
+});
 
-// Create the Apartment model
-const Apartment = model('Apartment', apartmentSchema)
+const Apartment = model('Apartment', apartmentSchema);
 
-module.exports = Apartment
+module.exports = Apartment;

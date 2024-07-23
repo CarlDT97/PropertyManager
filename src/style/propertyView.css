@@ -1,21 +1,21 @@
-.property-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Ensure full height */
+.ant-divider-horizontal {
+  background-color: rgb(9, 37, 69); /* Adjust color as needed */
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
 
 .property-header {
   margin: 10px;
   display: flex;
-  flex-direction: row; /* Adjust flex direction to row */
-  border: 3px solid red;
+  flex-direction: row;
 }
 
 .property_img {
   width: 70%;
   height: 380px;
   border-radius: 10px;
-  border: 3px solid green;
   margin-right: 20px;
   display: flex; /* Enable flexbox */
   justify-content: center; /* Center content horizontally */
@@ -31,12 +31,10 @@
 .tools_box {
   width: 30%;
   height: fit-content;
-  border: 3px solid green;
   border-radius: 10px;
 }
 
 .title-box {
-  border: 3px solid green;
   width: 60%;
   margin-left: 15px;
 }
@@ -45,18 +43,18 @@
   margin: 10px;
   display: flex;
   flex-direction: row;
-  border: 3px solid red;
 }
 
 .description-header {
   width: 100%;
   height: fit-content;
   border-radius: 10px;
-  border: 3px solid green;
+  border: 1px solid rgb(9, 37, 69);
+  text-align: center;
+
 }
 
 .rental-info {
-  border: 1px solid black;
   margin: 5px;
   border-radius: 10px;
   display: grid; /* Use flexbox to arrange items horizontally */
@@ -67,8 +65,5 @@
   display: flex; /* Use flexbox for centering */
   align-items: center; /* Center vertically */
   justify-content: left; /* Center horizontally */
-}
-
-.rental-info h3 {
-  margin-left: 20px;
+  text-align: center;
 }

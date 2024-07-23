@@ -1,14 +1,14 @@
-import * as React from 'react'
-import { Link } from 'react-router-dom' // Import Link from React Router
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-import { Avatar, Card } from 'antd';
+import * as React from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
+import { HomeOutlined} from '@ant-design/icons';
+import { Avatar, Card } from "antd";
 
 const { Meta } = Card;
 
 interface PropertyCardProps {
-  name: string
-  property_description: string
-  link: string
+  name: string;
+  property_description: string;
+  link: string;
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({
@@ -18,10 +18,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 }) => {
   return (
     <Link to={link}>
-      {' '}
-        <Card
-            hoverable
-
+      {" "}
+      <Card
+        hoverable
         style={{ width: 300 }}
         cover={
           <img
@@ -31,13 +30,13 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         }
       >
         <Meta
-          avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
+          avatar={<HomeOutlined />}
           title={name}
           description={property_description}
         />
       </Card>
     </Link>
-  )
-}
+  );
+};
 
-export default PropertyCard
+export default PropertyCard;

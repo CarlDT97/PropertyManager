@@ -1,7 +1,6 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model, Types } = require('mongoose');
 
 const propertySchema = new Schema({
-  propertyID: { type: String, required: true }, // Property ID
   propertyName: { type: String, required: true },
   address: { type: String, required: true },
   floors: { type: Number, required: true },
@@ -15,8 +14,9 @@ const propertySchema = new Schema({
   hasBasement: { type: Boolean, default: false, required: true },
   hasLoft: { type: Boolean, default: false, required: true },
   yearOfConstruction: { type: Number, required: true },
-})
+  apartments: [{ type: Schema.Types.ObjectId, ref: 'Apartment' }] // Array of apartment references
+});
 
-const Property = model('Property', propertySchema)
+const Property = model('property', propertySchema);
 
-module.exports = Property
+module.exports = Property;

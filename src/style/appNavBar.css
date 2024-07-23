@@ -1,7 +1,9 @@
 .content-box {
-    margin: 24px 16px;
-    padding: 24px;
-    height: 100vh;
-    background: #fff;
-    border-radius: 8px;
+  margin: 24px 16px;
+  padding: 24px;
+  height: fit-content;
+  min-height: 100vh;
+  background: #fff;
+  border-radius: 8px;
+
 }
